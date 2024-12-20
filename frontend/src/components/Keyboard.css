@@ -1,0 +1,90 @@
+.keyboard {
+    margin-top: 20px;
+  }
+  
+  .keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .keyboard-key {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #818384;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    min-width: 40px;
+    text-align: center;
+  }
+  
+  .keyboard-key.special-key {
+    min-width: 60px;
+  }
+  
+  .keyboard-key.correct {
+    background-color: #538d4e;
+    color: white;
+  }
+  
+  .keyboard-key.present {
+    background-color: #b59f3b;
+    color: white;
+  }
+  
+  .keyboard-key.absent {
+    background-color: #3a3a3c;
+    color: white;
+  }
+  
+  .keyboard-key:disabled {
+    background-color: #a8a8a8;
+    cursor: not-allowed;
+  }
+  
+  .keyboard-key:hover:not(:disabled) {
+    background-color: #a4a4a8;
+  }
+  
+  @media (max-width: 768px) and (min-width: 600px) {
+    .keyboard-key {
+      padding: 8px 12px;
+      font-size: 14px;
+      min-width: 35px;
+    }
+  
+    .keyboard-key.special-key {
+      min-width: 50px;
+    }
+  }
+  
+  @media (max-width: 599px) and (min-width: 480px) {
+    .keyboard-key {
+      padding: 6px 10px;
+      font-size: 12px;
+      min-width: 30px;
+    }
+  
+    .keyboard-key.special-key {
+      min-width: 45px;
+    }
+  }
+  
+  @media (max-width: 479px) {
+  
+    .keyboard-key {
+      padding: 5px 8px;
+      font-size: 10px;
+      min-width: 25px;
+      flex: 1 1 20%;
+    }
+  
+    .keyboard-key.special-key {
+      min-width: 50px;
+      flex: 1 1 40%;
+    }
+  }
